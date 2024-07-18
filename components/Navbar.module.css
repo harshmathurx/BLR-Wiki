@@ -1,0 +1,74 @@
+.navdiv{
+  /* border: .5rem red solid; */
+  width: 85%;
+  padding-left: 15%;
+  display: flex;
+  gap: 0;
+}
+
+.logo{
+  /* margin-left: 15%; */
+  font-size: 18px;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.gatelogo{
+  margin-left: 15%;
+  margin: 0;
+  align-self: center;
+
+}
+
+.wiki{
+  color: #868686;
+  margin: 0;
+  padding: 0;
+}
+
+.gatelogo:hover, .logo:hover{
+  cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+
+  .navdiv{
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      padding-left: 0;
+  }
+
+  .logo{
+      font-size: 18px;
+      font-weight: 600;
+
+  }
+
+  .gatelogo{
+      margin: 0;
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+
+  .navdiv{
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      padding-left: 0;
+  }
+
+  .logo{
+      font-size: 18px;
+      font-weight: 600;
+
+  }
+
+  .gatelogo{
+      margin: 0;
+  }
+
+}

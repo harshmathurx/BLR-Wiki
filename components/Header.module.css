@@ -1,0 +1,116 @@
+.maindiv{
+  /* border: .5rem red solid; */
+  min-height: 20rem;
+  color: white;
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.maindiv h1{
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  align-self: center;
+  font-weight: 600;
+  margin: 5px;
+}
+
+.maindiv p{
+  font-size: 22px;
+  color: #FFFFFF;
+  opacity: 80%;
+  font-weight: 500;
+  margin: 5px;
+}
+
+.maindiv button{
+  color: #FFFFFF;
+  background-color: #000000;
+  padding: .7rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  border: none;
+  border-radius: 56px;
+  min-width: 140px;
+  margin: 10px;
+}
+
+.maindiv button:hover{
+  cursor: pointer;
+  background-color: #818181;
+}
+
+
+@media (max-width: 600px) {
+
+  .maindiv{
+      min-height: 20rem;
+      width: 85%;
+      border-radius: 8px;
+  }
+
+  .maindiv h1{
+      font-size: 20px;
+      font-weight: 600;
+  }
+
+  .maindiv p{
+      font-size: 16px;
+      font-weight: 500;
+  }
+
+  .maindiv button{
+      font-weight: 600;
+      font-size: 14px;
+      min-width: 120px;
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+
+  .maindiv h1{
+      font-size: 24px;
+      font-weight: 600;
+      padding: 0 10px;
+  }
+
+  .maindiv p{
+      font-size: 20px;
+      font-weight: 500;
+  }
+
+  .maindiv button{
+      font-weight: 600;
+      font-size: 14px;
+      min-width: 120px;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .maindiv h1{
+      font-size: 26px;
+      font-weight: 600;
+      padding: 0 30px;
+  }
+
+  .maindiv p{
+      font-size: 20px;
+      font-weight: 500;
+  }
+
+  .maindiv button{
+      font-weight: 600;
+      font-size: 14px;
+      min-width: 120px;
+  }
+
+}
