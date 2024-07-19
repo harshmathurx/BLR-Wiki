@@ -1,10 +1,11 @@
 import styles from "./Main.module.css";
 
 const Main = ({ categories }) => {
+  const d = Date.now();
   return (
     <>
       {categories.map((category, i) => (
-        <div className={styles.bodyBox}>
+        <div key={i + d} className={styles.bodyBox}>
           <div className={styles.bodyBoxHeader}>
             <h1>
               {category.emoji} {category.name}
