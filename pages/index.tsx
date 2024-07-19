@@ -3,8 +3,8 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import supabase from "../supabaseClient";
 import Header from "../components/Header";
-import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
+import Main from "../components/Main";
 
 const Home: NextPage = () => {
   async function fetchCategories() {
@@ -36,15 +36,18 @@ const Home: NextPage = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>BLR Wiki</title>
         <meta name="description" content="good morning, kappi for one?" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="appHeader">
-        <Navbar />
+      <div className={styles.AppHeader}>
+        {/* <Navbar /> */}
         <Header />
+        <div className={styles.mainbodydiv}>
+          <Main categories={categories} />
+        </div>
       </div>
     </div>
   );

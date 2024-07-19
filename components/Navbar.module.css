@@ -2,6 +2,8 @@
   /* border: .5rem red solid; */
   width: 85%;
   padding-left: 15%;
+padding-top: 1%;
+padding-bottom: 1%;
   display: flex;
   gap: 0;
 }
