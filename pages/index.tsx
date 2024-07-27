@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import supabase from "../supabaseClient";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import Main from "../components/Main";
 
@@ -36,7 +37,7 @@ const Home: NextPage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="relative h-screen">
       <Head>
         <title>BLR Wiki</title>
         <meta name="description" content="good morning, kappi for one?" />
@@ -49,6 +50,7 @@ const Home: NextPage = () => {
           <Main categories={categories} />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

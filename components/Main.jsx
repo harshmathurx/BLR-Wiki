@@ -20,7 +20,7 @@ const Main = ({ categories }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {place.name} <span className={styles.arrowIcon}></span>
+                    {">"} {place.name} <span className={styles.arrowIcon}></span>
                   </a>
                 </li>
               ))}
