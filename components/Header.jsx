@@ -21,12 +21,17 @@ export default function Header() {
     <div className="w-full flex flex-col items-center">
       <div className={`flex flex-col ${degular.className} my-12`}>
         <div className="flex items-center">
-          <img src="/map_pin.svg" height="25" width="25" />
-          <p className="text-xl">your are at</p>
+          <img src="/map_pin.svg" height="25" width="25" alt="Location Pin" />
+          <p className="text-base sm:text-lg lg:text-xl">you are at</p>
         </div>
-        <p className="text-[96px] leading-none mt-[-13px]">bengaluru</p>
-        <p className="self-end mr-2">blr.wiki</p>
+        <p className="text-[48px] sm:text-[72px] lg:text-[96px] leading-none mt-[-8px] sm:mt-[-10px] lg:mt-[-13px]">
+          bengaluru
+        </p>
+        <p className="self-end mr-2 text-sm sm:text-base lg:text-lg">
+          blr.wiki
+        </p>
       </div>
+
       {/* <div className={styles.maindiv} style={{backgroundImage:"url('blr.jpg')", backgroundRepeat:"no-repeat",backgroundSize:"cover", backgroundPosition: "center bottom", height: "600px" }}>
       
       </div> */}
