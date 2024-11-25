@@ -6,17 +6,17 @@ export default function Footer() {
       <p>
         Have more places in mind? Share them{' '}
         <a 
-          href="https://your-typeform-url.com" 
+          href="https://airtable.com/appgj3zR7clC0nFDc/shrk2vyPGgCNKXyrm" 
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-900 hover:text-gray-600 transition-colors"
+          className="text-gray-900 hover:text-gray-600 transition-colors underline"
         >
           here
         </a>
         !
       </p>
       <p className="mt-2">
-        inspired by <Link target="_blank" rel="noopener noreferrer" href="https://dilli.wiki">dilli.wiki</Link>
+        inspired by <Link target="_blank" className="underline" rel="noopener noreferrer" href="https://dilli.wiki">dilli.wiki</Link>
       </p>
     </footer>
   )
