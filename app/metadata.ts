@@ -11,7 +11,7 @@ export const siteConfig = {
 export const metadata = {
   metadataBase: new URL("https://blr-wiki.vercel.app"),
   title: {
-    default: "blr.wiki - Bangalore's UltimateS Guide",
+    default: "blr.wiki - bangalore's ultimate guide",
     template: "%s | blr.wiki",
   },
   description: "Discover Bangalore's gems with blr.wiki. From iconic breakfast spots like MTR and CTR to trendy cafes like Blue Tokai and Third Wave. Your ultimate guide to food, coffee, workspaces, and experiences in Bengaluru.",
