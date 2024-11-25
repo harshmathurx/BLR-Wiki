@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blr-wiki.vercel.app/sitemap.xml 
