@@ -3,7 +3,7 @@ import local from "next/font/local";
 import Image from "next/image";
 
 const handleShare = () => {
-    const tweet = encodeURIComponent(`local food spots to your weekend date plans.\n\neverything you need to know about namma bengaluru. \n \ncheck out: https://blr-wiki-vercel.app`);
+    const tweet = encodeURIComponent(`local food spots to your weekend date plans.\n\neverything you need to know about namma bengaluru. \n \ncheck out: https://blr-wiki.vercel.app`);
     const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${tweet}`;
     window.open(twitterIntentUrl, '_blank');
 }
