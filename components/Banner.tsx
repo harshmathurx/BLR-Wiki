@@ -39,10 +39,10 @@ export default function Banner() {
             <div className="relative h-full flex flex-col items-center justify-center text-white text-center px-4 max-w-3xl mx-auto">
                 <div className={`flex flex-col ${degular.className} my-12`}>
                     <div className="flex items-center">
-                        <Image alt="map pin" src="/map_pin.svg" height="25" width="25" />
-                        <p className="text-xl">your are at</p>
+                        <Image alt="map pin" src="/map_pin.svg" height="20" width="20" className="ml-[-4px] md:ml-0" />
+                        <p className="text-xl">you&#39;re at</p>
                     </div>
-                    <p className="text-[96px] leading-none mt-[-13px]">bengaluru</p>
+                    <p className="text-[48px] leading-none mt-[-12px] md:text-[96px]">bengaluru</p>
                     <p className="self-end mr-2">blr.wiki</p>
                 </div>
 
