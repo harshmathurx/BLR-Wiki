@@ -1,5 +1,4 @@
 "use client";
-import { TwitterIcon } from "lucide-react";
 import local from "next/font/local";
 import Image from "next/image";
 
@@ -47,8 +46,8 @@ export default function Banner() {
                     <p className="self-end mr-2">blr.wiki</p>
                 </div>
  
-                <button className="mt-8 bg-black text-white px-8 py-2.5 rounded-full text-sm hover:bg-zinc-950 hover:border-white hover:border-[1px] transition-colors flex gap-2 items-center justify-center" onClick={handleShare}>
-                    Share on <TwitterIcon />
+                <button className="mt-8 bg-black text-white px-8 py-2.5 rounded-full text-sm hover:bg-zinc-950 hover:border-white hover:border-[1px] transition-colors flex gap-1 items-center justify-center" onClick={handleShare}>
+                    Share on <Image src="/x.svg" alt="x" width="16" height="16" />
                 </button>
             </div>
         </div>
