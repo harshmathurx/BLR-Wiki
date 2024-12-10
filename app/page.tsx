@@ -7,12 +7,14 @@ import { createClient } from '@/lib/supabase/client'
 
 export default async function Home() {
   const supabase = createClient()
-  
-  const { data: categories } = await supabase
+
+  const response = await supabase
     .from('categories')
-    .select('*, places(*)')
+    .select('*, places!inner(*)')
     .order('id')
   
+  const { data: categories } = response
+
   return (
     <>
       <Header />

@@ -1,10 +1,10 @@
 "use client"
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { HoverEffect } from '@/components/ui/HoverEffect'
-import { LinkIcon } from 'lucide-react'
+import { BeerIcon, CarIcon, ChevronRight, CoffeeIcon, ComputerIcon, CroissantIcon, DumbbellIcon, FlowerIcon, MartiniIcon } from 'lucide-react'
 import Link from 'next/link'
-import { PlacesDialog } from './PlacesDialog'
 import { useState } from 'react'
+import { PlacesDialog } from './PlacesDialog'
 
 interface Place {
   id: number
@@ -19,41 +19,52 @@ interface Category {
   places: Place[]
 }
 
+export const categoryIconMap: Record<string, React.ReactNode> = {
+  "Coffee": <CoffeeIcon />,
+  "Food": <CroissantIcon />,
+  "Drinks": <MartiniIcon />,
+  "Restaurants": <CroissantIcon />,
+  "Gyms": <DumbbellIcon />,
+  "Breakfast": <CroissantIcon />,
+  "Drive Routes": <CarIcon />,
+  "Date Plans": <FlowerIcon />,
+  "Co-working": <ComputerIcon />,
+  "Where's the party at?": <BeerIcon />,
+}
+
 export default function DirectoryGrid({ categories }: { categories: Category[] }) {
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null)
-
   return (
     <>
       <div className="container mx-auto py-12 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((category) => (
             <HoverEffect key={category.id}>
-              <Card className="border border-gray-200 h-auto md:h-[400px]">
-                <CardHeader className="pb-4 border-border/10 border-b border-gray-200">
+              <Card className="border border-gray-200 h-auto md:h-[420px]">
+                <CardHeader className="pb-4 border-border/10 border-b border-gray-200 flex flex-row justify-between items-center">
                   <CardTitle className="flex items-center gap-2 text-xl font-semibold">
-                    <span className="text-lg">{category.emoji}</span>
                     <span>{category.name}</span>
                   </CardTitle>
+                  <div className="bg-[#1D1C1C] rounded-full p-2 text-white h-8 w-8 flex items-center justify-center">
+                    {categoryIconMap[category.name]}
+                  </div>
                 </CardHeader>
                 <CardContent className="pt-4">
                   <ul className="space-y-2.5">
-                    {category.places.slice(0, 8).map((place, index) => (
-                      <li key={place.id} className="text-[16px] text-muted-foreground">
-                        <Link 
+                    {category.places.slice(0, 7).map((place) => (
+                      <li key={place.id} className=" text-muted-foreground">
+                        <Link
                           href={place.href}
                           target="_blank"
-                          rel="noopener noreferrer" 
-                          className="hover:text-foreground transition-colors inline-flex items-center"
+                          rel="noopener noreferrer"
+                          className="hover:underline text-foreground transition-colors inline-flex items-center"
                         >
-                          <span className="mr-1">{index + 1}.</span>
+                          <span className="mr-1"><ChevronRight /></span>
                           <span>{place.name}</span>
-                          <span className="text-gray-400 ml-1">
-                            <LinkIcon className="w-3 h-3" />
-                          </span>
                         </Link>
                       </li>
                     ))}
-                    {category.places.length > 8 && (
+                    {category.places.length > 7 && (
                       <li>
                         <button
                           onClick={() => setSelectedCategory(category)}
@@ -76,7 +87,6 @@ export default function DirectoryGrid({ categories }: { categories: Category[] }
         onClose={() => setSelectedCategory(null)}
         places={selectedCategory?.places || []}
         categoryName={selectedCategory?.name || ''}
-        emoji={selectedCategory?.emoji || ''}
       />
     </>
   )
