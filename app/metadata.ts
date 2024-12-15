@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "blr.wiki",
   description: "A guide to falling in love with Bengaluru. Find the best food spots, coffee shops, breakfast places, date spots, and more.",
   url: "https://blr-wiki.vercel.app",
-  ogImage: "https://blr-wiki.vercel.app/ogimage.png",
+  ogImage: "https://blr-wiki.vercel.app/ogimage.jpg",
   links: {
     twitter: "https://twitter.com/harshwhere",
   },
